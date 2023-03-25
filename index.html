@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15 - EVENTS</title>
+</head>
+<body>
+    <!-- Cabecera de mi doc-->
+    <header>
+        <h1>Ejercicio 15 - Eventos</h1>
+    </header>
+
+    <!-- Cuerpo principal de mi documento HTML-->
+    <main>
+        <h2>Área de pruebas</h2>
+        <!-- Evento clic muestra la fecha en el doc-->
+        <div>
+            <p id = "fechaSistema">
+                Aqui aparaecerá la Fecha del sistema al hacer clic 
+                sobre el botón FECHA
+            </p>
+            <button type = "button" onclick = "document.getElementById('fechaSistema').innerHTML = Date()">Fecha del Sistema</button>
+        </div>
+        <!-- Evento clic de un botón coloca la fecha del sistema sobre el cotenido de sí mismo-->
+        <div>
+            <button type = "button" onclick = "this.innerHTML = Date()">Fecha del Sistema</button>
+        </div>
+        <!-- declarando variables string con la palabra reservada new -->
+        <div>
+            <p id="compara"></p>
+            <p id="tipo1"></p>
+            <p id="tipo2"></p>
+            <p id="tipo3"></p>
+            <script>
+                let nombre1 = new String("Fernando") ;
+                let nombre2 = new String("Fernando") ;
+                document.getElementById("compara").innerHTML = (nombre1 == nombre2) ;
+                document.getElementById("tipo1").innerHTML = typeof nombre1 ;
+                document.getElementById("tipo2").innerHTML = typeof nombre2 ;
+                document.getElementById("tipo3").innerHTML = typeof nombre1 + "<br>" + typeof nombre2;
+            </script>
+        </div>
+    </main>
+
+    <!-- Pie o footer de mi doc HTML-->
+    <footer>
+
+    </footer>
+</body>
+</html>
